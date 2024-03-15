@@ -12,3 +12,18 @@ void defuseOneBomb () {
         moveForward();
     }
 }
+
+/*2. Lösung mit repeat:*/
+
+void defuseOneBomb () {
+    repeat (9) {
+        moveForward();
+    }
+    pickBeeper();
+    turnLeft();
+    moveForward();
+    turnLeft();
+    repeat (9) {
+        moveForward();
+    }
+}
