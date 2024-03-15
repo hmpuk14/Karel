@@ -1,0 +1,22 @@
+void obtainArtifact () {
+    turnRight();
+    turnThree();    
+    turnSingle();
+    pickBeeper();
+    turnThree();
+    turnSingle();    
+    dropBeeper();
+}
+
+void turnThree () {
+    moveForward();
+    turnLeft();
+    repeat (3) {
+        moveForward();
+    }
+}
+
+void turnSingle () {
+    turnLeft();
+    moveForward();    
+}

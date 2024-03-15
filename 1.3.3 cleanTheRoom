@@ -1,0 +1,37 @@
+void cleanTheRoom() {
+    repeat (5) {
+        cleanup ();
+        turnleft ();
+        cleanup ();
+        if (rightIsClear ()) {
+            turnright ();            
+        }
+    }         
+}
+
+void cleanup () {
+    while (frontIsClear()) {
+        moveForward();        
+        
+        if (onBeeper()){
+            pickBeeper();
+        } 
+    }
+}   
+void turnleft () {
+    turnLeft();
+    moveForward();
+    turnLeft();        
+    if (onBeeper()){
+        pickBeeper();
+    }    
+}
+
+void turnright () {
+    turnRight();
+    moveForward();
+    turnRight();   
+    if (onBeeper()){
+        pickBeeper();
+    }    
+}
