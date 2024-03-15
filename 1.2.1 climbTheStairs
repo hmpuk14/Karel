@@ -1,0 +1,10 @@
+void climbTheStairs () {
+    repeat (6) {
+        moveForward();
+        turnLeft();
+        moveForward();
+        turnRight();    
+    }
+    moveForward();
+}
+/*Da es keinen Beeper gibt braucht man nur einen wiederholenden Bewegungsablauf und demnach kein if oder while*/

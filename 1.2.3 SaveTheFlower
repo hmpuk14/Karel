@@ -1,0 +1,30 @@
+void saveTheFlower () {
+    repeat (4) {
+        if (frontIsClear()) {
+            moveForward(); 
+            if (onBeeper()) {
+                pickBeeper();
+            }  
+        }
+        turnLeft();
+        repeat (2) {
+            moveForward();
+        }    
+        turnRight();
+    }  
+    moveForward();
+    dropBeeper();
+    moveForward();
+    turnRight();
+    
+    repeat (11) {
+        if (frontIsClear()) {
+            moveForward(); 
+        }
+        else {
+            turnLeft();
+            moveForward();
+            turnRight();
+        } 
+    }
+}   
