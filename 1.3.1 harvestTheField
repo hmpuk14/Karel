@@ -1,0 +1,42 @@
+void harvestTheField () {
+    curveL();
+    curveR();  
+    curveL();
+    pickR();
+    pickBeeper();
+    turnLeft();
+}
+
+void pickL() {
+    repeat (3) {      
+        pickBeeper();
+        turnRight();
+        moveForward();
+        turnLeft();
+        moveForward();
+    }    
+}
+void pickR() {
+    repeat (3) {      
+        pickBeeper();
+        moveForward();
+        turnLeft();
+        moveForward();
+        turnRight();
+    }    
+}
+void curveL() {
+    pickL();
+    pickBeeper();
+    moveForward();
+    turnLeft();
+    moveForward();  
+}
+
+void curveR() {
+    pickR();
+    pickBeeper();
+    moveForward();
+    turnRight();
+    moveForward();        
+}

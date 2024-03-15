@@ -1,0 +1,25 @@
+void repairTheStreet () {           
+    while (frontIsClear () ) {   
+        if (rightIsClear () ) {
+            dropBeep ();
+            moveForward();
+        }
+        
+        else {            
+            moveForward();    
+        }
+    }
+    if (rightIsClear () ) {
+        dropBeep ();
+        turnRight();  
+    }    
+}
+
+void dropBeep () {
+    turnRight();
+    moveForward();
+    dropBeeper();
+    turnAround();
+    moveForward();
+    turnRight(); 
+}
