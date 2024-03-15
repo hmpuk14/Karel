@@ -1,0 +1,48 @@
+void defuseTwoBombs () {
+    repeat (2) {
+        move();
+        turn();
+        
+    }
+    turnLeft();
+    move();
+    turn();
+    move();
+    turnAround();
+}
+
+void move() {
+    repeat (9) {
+        moveForward();
+    }
+}
+
+void turn() {
+    if (onBeeper()) {
+        pickBeeper();
+    }
+    turnAround();
+}
+
+/*2. Lösung mit while:*/
+
+void defuseTwoBombs () {
+    repeat (2) {
+        pickmove();
+    }
+    turnRight();
+    repeat (2) {
+        pickmove();
+    }
+    turnAround();
+}
+
+void pickmove() {
+    while (frontIsClear()) {
+        moveForward();        
+    }
+    if (onBeeper()) {
+        pickBeeper();
+        turnAround();
+    }
+}
