@@ -1,0 +1,19 @@
+void jumpTheHurdles () {   
+
+    while (!onBeeper()) {   
+        while (!rightIsClear() && !onBeeper()) {
+            if (frontIsClear()) { 
+                moveForward();
+            }
+            else {
+                turnLeft();            
+            }            
+        } 
+        if (!onBeeper()) {
+            repeat (2) {
+                turnRight();
+                moveForward();  
+            }         
+        }   
+    }      
+}

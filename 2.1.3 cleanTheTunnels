@@ -1,0 +1,33 @@
+void cleanTheTunnels () {   
+    
+    while (frontIsClear()) {
+        if (onBeeper()) {
+            turnLeft();        
+            pickBeeper();
+            collectBeep ();    
+            moveForward();
+        }
+        else {
+            moveForward();
+        }
+        
+    } 
+    if (onBeeper()) {
+        turnLeft();        
+        pickBeeper();
+        collectBeep ();                            
+    }
+}
+
+
+void collectBeep () {
+    while (beeperAhead()){
+        moveForward(); 
+        pickBeeper();
+    }
+    turnAround();
+    while (frontIsClear()) {
+        moveForward();
+    }
+    turnLeft();      
+}

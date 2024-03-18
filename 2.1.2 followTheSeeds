@@ -1,0 +1,37 @@
+void followTheSeeds () {   
+    
+    while (frontIsClear() ) {
+        
+        while (beeperAhead()) {
+            moveForward();  
+            pickBeeper();
+        }
+        
+        turnLeft();          
+        
+        if (beeperAhead()){
+            moveForward();
+            pickBeeper();          
+        }  
+    }
+}    
+
+/* Karel dreht sich am Ende, bis !frontIsClear, das ist etwas unschön. Alternativ könnte man mit repeat arbeiten:*/
+
+void followTheSeeds () {   
+    
+    repeat (11) {
+        
+        while (beeperAhead()) {
+            moveForward();  
+            pickBeeper();
+        }
+        
+        turnLeft();          
+        
+        if (beeperAhead()){
+            moveForward();
+            pickBeeper();          
+        }  
+    }
+}    

@@ -1,0 +1,13 @@
+void decrement () {   
+    
+    while (!onBeeper()) {   
+        if (frontIsClear ()) {  
+            dropBeeper();  
+            moveForward();
+        }
+        else {
+            dropBeeper();  
+        }
+    }    
+    pickBeeper();        
+}    
