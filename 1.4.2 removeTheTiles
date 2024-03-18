@@ -1,0 +1,13 @@
+void removeTheTiles () {     
+    
+    while (onBeeper()) {   
+        pickBeeper();
+        if (frontIsClear () && beeperAhead()) {
+            moveForward();
+        }  
+        else {
+            turnLeft();
+            moveForward();
+        }
+    }      
+}
