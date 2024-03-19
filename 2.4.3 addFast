@@ -1,0 +1,73 @@
+void addFast(){
+    repeat(9){
+        moveForwardCheckBeeper();
+    }
+}
+
+void moveForwardCheckBeeper() {
+    moveForward();
+    if(onBeeper()) {
+        moveForward();
+        checkAndDropBeeper();
+    } else {
+        checkAndDropBeeperWithoutMoving();
+    }
+}
+
+void checkAndDropBeeper() {
+    if(onBeeper()) {
+        complexBeeperHandling();
+    } else {
+        simpleBeeperHandling();
+    }
+}
+
+void checkAndDropBeeperWithoutMoving() {
+    if(onBeeper()) {
+        simpleBeeperHandling();
+    } else {
+        turnAround();
+        oneLeft();
+    }
+}
+
+void simpleBeeperHandling() {
+    turnRight();
+    moveForward();
+    dropBeeperAndReturn();
+    turnLeft();
+    oneLeft();
+}
+
+void complexBeeperHandling() {
+    turnRight();
+    moveForward();
+    dropBeeperAndReturn();
+    turnRight();
+    if(onBeeper()) {
+        moveForward();
+        dropBeeperAndReturn();
+    }
+    turnAround();
+    oneLeft();
+}
+
+void dropBeeperAndReturn() {
+    dropBeeper();
+    turnAround();
+    moveForward();
+}
+
+void oneLeft(){
+    if(frontIsClear()){
+        moveForward();
+    }
+    if(frontIsClear()){
+        moveForward();
+    }
+    turnLeft();
+    if(frontIsClear()){
+        moveForward();
+    }
+    turnLeft();
+}
