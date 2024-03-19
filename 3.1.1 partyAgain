@@ -1,0 +1,60 @@
+void partyAgain () {     
+    while (onBeeper()) {
+        turnLeft();
+        pickBeeper();
+        measureDistance();        
+        turnLeft();
+        if(frontIsClear()){
+            moveForward();
+        }     
+    }    
+}
+
+void measureDistance() {
+    
+    repeat (5) {
+        moveForward();
+    }
+    if (!frontIsClear()) {
+        dropBeeper();
+        turnAround();
+        repeat (5) {
+            moveForward();
+        }            
+    }
+    else if (frontIsClear()) {
+        moveForward();
+        if (!frontIsClear()) {
+            dropBeeper();
+            turnAround();
+            repeat (6) {
+                moveForward();
+            }
+        }
+        else if (frontIsClear()) {
+            moveForward();
+            if (!frontIsClear()) {
+                dropBeeper();
+                turnAround();
+                repeat (7) {
+                    moveForward();
+                }
+            }
+            else if (!frontIsClear()) {               
+                moveForward(); 
+                
+                if (!frontIsClear()) {
+                    dropBeeper();
+                    turnAround();
+                    repeat (8) {
+                        moveForward();
+                    }
+                }
+                
+            } 
+        }
+    }    
+    
+}
+
+

@@ -1,0 +1,65 @@
+void fetchTheStars () {  
+    while (frontIsClear()) {
+        turnLeft();        
+        measureDistance();   
+        dropBeeper();
+        turnLeft();
+        moveForward();
+    }   
+    turnLeft();        
+    measureDistance();   
+    dropBeeper();
+    turnLeft();
+}    
+
+
+void measureDistance() {
+    
+    repeat (5) {
+        moveForward();
+    }
+    if (!frontIsClear()) {
+        pickBeeper();
+        turnAround();
+        repeat (5) {
+            moveForward();
+        }            
+    }
+    else if (frontIsClear()) {
+        moveForward();
+        if (!frontIsClear()) {
+            pickBeeper();
+            turnAround();
+            repeat (6) {
+                moveForward();
+            }
+        }
+        else if (frontIsClear()) {
+            moveForward();
+            if (!frontIsClear()) {
+                pickBeeper();
+                turnAround();
+                repeat (7) {
+                    moveForward();
+                }
+            }
+            else if (!frontIsClear()) {               
+                moveForward(); 
+                
+                if (!frontIsClear()) {
+                    pickBeeper();
+                    turnAround();
+                    repeat (8) {
+                        moveForward();
+                    }
+                }
+                
+            } 
+        }
+    }    
+    
+}
+
+
+
+
