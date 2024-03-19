@@ -1,0 +1,142 @@
+/*
+F1 = moveForward();
+F2 = turnLeft();
+F3 = turnAround();
+F4 = turnRight();
+F5 = pickBeeper();
+F6 = dropBeeper();
+*/
+
+
+
+
+
+void layAndRemoveTiles() {
+    repeat (117) {  
+        if (frontIsClear()) {
+            if (!beeperAhead()) {     
+                dropBeeper();
+                moveForward();               
+            }    
+            else {
+                turnLeft();  
+            }
+        }        
+        else {
+            turnLeft();   
+        }
+    }
+    turnLeft();  
+    dropBeeper();
+    moveForward();
+    turnAround();
+    moveForward();
+    
+    repeat (3) {  
+        
+        if (beeperAhead()) {     
+            turnRight(); 
+            pickBeeper();
+            moveForward();
+        }              
+        
+    }
+    pickBeeper();
+    moveForward();
+    repeat (2) {
+        turnRight(); 
+        repeat (2) {            
+            pickBeeper();
+            moveForward();            
+        }  
+        
+        
+    }  
+    pickBeeper();
+    moveForward();
+    repeat (2) {
+        turnRight(); 
+        repeat (3) {            
+            pickBeeper();
+            moveForward();            
+        }  
+        
+        
+    }  
+    pickBeeper();
+    moveForward();
+    repeat (2) {
+        turnRight(); 
+        repeat (4) {            
+            pickBeeper();
+            moveForward();            
+        }  
+        
+        
+    }  
+    pickBeeper();
+    moveForward();
+    repeat (2) {
+        turnRight(); 
+        repeat (5) {            
+            pickBeeper();
+            moveForward();            
+        }  
+        
+        
+    }  
+    pickBeeper();
+    moveForward();
+    repeat (2) {
+        turnRight(); 
+        repeat (6) {            
+            pickBeeper();
+            moveForward();            
+        }  
+        
+        
+    }  
+    pickBeeper();
+    moveForward();
+    repeat (2) {
+        turnRight(); 
+        repeat (7) {            
+            pickBeeper();
+            moveForward();            
+        }  
+        
+        
+    }  
+    pickBeeper();
+    moveForward();
+    repeat (2) {
+        turnRight(); 
+        repeat (8) {            
+            pickBeeper();
+            moveForward();            
+        }  
+        
+        
+    }  
+    pickBeeper();
+    moveForward();
+    repeat (2) {
+        turnRight(); 
+        repeat (9) {            
+            pickBeeper();
+            moveForward();            
+        }  
+        
+        
+    } 
+    pickBeeper();
+}  
+
+
+
+
+
+
+
+
+

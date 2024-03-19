@@ -1,0 +1,110 @@
+void secureTheCave() {
+    while (frontIsClear()) {
+        turnLeft();
+        while (frontIsClear()) {
+            moveForward(); 
+        }
+        turnAround();       
+        pickBeeper();   
+        moveForward(); 
+        if (!onBeeper()) {        
+            while (frontIsClear()) {
+                moveForward();            
+            } 
+            turnAround();
+            dropBeeper();   
+            moveForward();
+            turnRight();
+            moveForward();
+            
+        } 
+        else if (onBeeper()) { 
+            pickBeeper();   
+            moveForward();
+            if (!onBeeper()) { 
+                while (frontIsClear()) {
+                    moveForward();            
+                } 
+                turnAround();
+                repeat (2) {                
+                    dropBeeper();
+                    moveForward();
+                }
+                turnRight();
+                moveForward();
+            }    
+        }
+        if (onBeeper()) { 
+            pickBeeper();   
+            moveForward();
+            while (frontIsClear()) {
+                moveForward();            
+            } 
+            turnAround();
+            repeat (3) {               
+                dropBeeper();
+                moveForward();
+            }
+            turnRight();
+            moveForward();
+            
+        }              
+    }    
+    
+    turnLeft();
+    while (frontIsClear()) {
+        moveForward(); 
+    }
+    turnAround();       
+    pickBeeper();   
+    moveForward();     
+    if (!onBeeper()) {        
+        while (frontIsClear()) {
+            moveForward();            
+        } 
+        turnAround();
+        dropBeeper();   
+        moveForward();
+        turnRight();
+        
+        
+    }
+    else if (onBeeper()) { 
+        pickBeeper();   
+        moveForward();
+        if (!onBeeper()) { 
+            while (frontIsClear()) {
+                moveForward();            
+            } 
+            turnAround();
+            repeat (2) {                
+                dropBeeper();
+                moveForward();
+            }
+            turnRight();
+            
+        }    
+        
+        if (onBeeper()) { 
+            pickBeeper();   
+            moveForward();
+            while (frontIsClear()) {
+                moveForward();            
+            } 
+            turnAround();
+            repeat (3) {               
+                dropBeeper();
+                moveForward();
+            }
+            turnRight();
+            
+            
+        }          
+    }
+}
+
+
+
+
+
+

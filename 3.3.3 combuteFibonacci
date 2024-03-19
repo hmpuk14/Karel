@@ -1,0 +1,83 @@
+void computeFibonacci() {
+    repeat (8) {
+        addSmart();
+        moveForward();
+        turnLeft();
+        while (frontIsClear()) {
+            moveForward();
+        }
+        turnRight();
+    }
+}
+
+void addSmart() {
+    if (rightIsClear()) {
+        if (onBeeper() && beeperAhead()) {          
+            turnRight();
+            moveForward();
+            turnLeft();
+            addSmartCarry();
+        } else if (!onBeeper() && !beeperAhead()) {          
+            turnRight();
+            moveForward();
+            turnLeft();
+            addSmart();
+        } else {           
+            addSumBit();
+            addSmart();
+        }   
+    }
+}
+
+void addSmartCarry() {
+    if (rightIsClear()) {
+        if (onBeeper() && beeperAhead()) {           
+            addSumBit();
+            addSmartCarry();
+        } else if (!onBeeper() && !beeperAhead()) {           
+            addSumBit();
+            addSmart();
+        } else {            
+            turnRight();
+            moveForward();
+            turnLeft();
+            addSmartCarry();
+        }   
+    }
+}
+
+void addSumBit() {
+    moveForward();
+    moveForward();
+    dropBeeper();
+    turnRight();
+    moveForward();
+    turnRight();
+    moveForward();
+    moveForward();
+    turnAround(); 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
